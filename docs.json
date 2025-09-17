@@ -11,58 +11,31 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
-        "groups": [
-          {
-            "group": "Getting started",
-            "pages": [
-              "index",
-              "quickstart",
-              "development"
-            ]
-          },
-          {
-            "group": "Customization",
-            "pages": [
-              "essentials/settings",
-              "essentials/navigation"
-            ]
-          },
-          {
-            "group": "Writing content",
-            "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
-            ]
-          },
-          {
-            "group": "AI tools",
-            "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
-            ]
-          }
+        "tab": "Dev Docs",
+        "pages": [
+          "dev_docs/getting-started",
+          "dev_docs/app-center",
+          "dev_docs/data",
+          "dev_docs/relationships",
+          "dev_docs/errors",
+          "dev_docs/ramp-mcp"
         ]
       },
       {
         "tab": "REST API",
-        "groups": [
+        "menu": [
           {
-            "group": "API documentation",
+            "item": "Accounting",
             "pages": [
-              "api-reference/introduction"
+              "rest_api/fetch-all-accounting-connections",
+              "rest_api/upload-new-options"
             ]
           },
           {
-            "group": "Endpoint examples",
+            "item": "Webhooks",
             "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "rest_api/get-all-webhook-subscriptions",
+              "rest_api/verify-a-webhook-subscription"
             ]
           }
         ]
@@ -107,24 +80,23 @@
   },
   "contextual": {
     "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
+      "copy",
+      "view",
+      "chatgpt",
+      "claude",
+      "perplexity",
+      "mcp",
+      "cursor",
+      "vscode"
+    ]
   },
   "appearance": {
     "default": "dark"
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "x": "https://x.com/tryramp",
+      "linkedin": "https://www.linkedin.com/company/ramp/"
     }
   }
 }
