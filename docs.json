@@ -12,13 +12,18 @@
     "tabs": [
       {
         "tab": "Dev Docs",
-        "pages": [
-          "dev_docs/getting-started",
-          "dev_docs/app-center",
-          "dev_docs/data",
-          "dev_docs/relationships",
-          "dev_docs/errors",
-          "dev_docs/ramp-mcp"
+        "groups:" [
+          {
+            "group": "Guides",
+            "pages": [
+              "dev_docs/getting-started",
+              "dev_docs/app-center",
+              "dev_docs/data",
+              "dev_docs/relationships",
+              "dev_docs/errors",
+              "dev_docs/ramp-mcp"
+            ]
+          }
         ]
       },
       {
