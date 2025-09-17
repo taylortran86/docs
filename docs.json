@@ -23,16 +23,16 @@
       },
       {
         "tab": "REST API",
-        "menu": [
+        "groups": [
           {
-            "item": "Accounting",
+            "group": "Accounting",
             "pages": [
-              "rest_api/fetch-all-accounting-connections",
+              "rest_api/fetch-all-accounting-connections-for-the-current-business",
               "rest_api/upload-new-options"
             ]
           },
           {
-            "item": "Webhooks",
+            "group": "Webhooks",
             "pages": [
               "rest_api/get-all-webhook-subscriptions",
               "rest_api/verify-a-webhook-subscription"
