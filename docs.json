@@ -12,10 +12,11 @@
     "tabs": [
       {
         "tab": "Dev Docs",
-        "groups:" [
+        "groups": [
           {
             "group": "Guides",
             "pages": [
+              "index",
               "dev_docs/getting-started",
               "dev_docs/app-center",
               "dev_docs/data",
