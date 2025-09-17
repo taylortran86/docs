@@ -19,8 +19,7 @@
               "index",
               "dev_docs/getting-started",
               "dev_docs/app-center",
-              "dev_docs/data",
-              "dev_docs/relationships",
+              "dev_docs/data-relationships",
               "dev_docs/errors",
               "dev_docs/ramp-mcp"
             ]
@@ -29,19 +28,19 @@
       },
       {
         "tab": "REST API",
-        "groups": [
+        "menu": [
           {
-            "group": "Accounting",
+            "item": "Accounting",
             "pages": [
-              "rest_api/fetch-all-accounting-connections-for-the-current-business",
-              "rest_api/upload-new-options"
+              "api-reference/fetch-all-accounting-connections",
+              "api-reference/upload-new-options"
             ]
           },
           {
-            "group": "Webhooks",
+            "item": "Webhooks",
             "pages": [
-              "rest_api/get-all-webhook-subscriptions",
-              "rest_api/verify-a-webhook-subscription"
+              "api-reference/get-all-webhook-subscriptions",
+              "api-reference/verify-a-webhook-subscription"
             ]
           }
         ]
