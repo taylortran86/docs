@@ -28,16 +28,16 @@
       },
       {
         "tab": "REST API",
-        "menu": [
+        "groups": [
           {
-            "item": "Accounting",
+            "group": "Accounting",
             "pages": [
               "api-reference/fetch-all-accounting-connections",
               "api-reference/upload-new-options"
             ]
           },
           {
-            "item": "Webhooks",
+            "group": "Webhooks",
             "pages": [
               "api-reference/get-all-webhook-subscriptions",
               "api-reference/verify-a-webhook-subscription"
