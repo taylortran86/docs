@@ -1,13 +1,13 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "Ramp",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#e4f221",
+    "light": "#e4f221",
+    "dark": "#e4f221"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "/ramp_favicon.jpeg",
   "navigation": {
     "tabs": [
       {
@@ -96,13 +96,13 @@
     "links": [
       {
         "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "href": "mailto:test@ramp.com"
       }
     ],
     "primary": {
       "type": "button",
       "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "href": "https://ramp.com"
     }
   },
   "contextual": {
