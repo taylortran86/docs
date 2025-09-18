@@ -7,6 +7,17 @@
     "light": "#e4f221",
     "dark": "#e4f221"
   },
+  "fonts": {
+    "family": "Inter",
+    "heading": {
+      "family": "Playfair Display",
+      "weight": 700
+    },
+    "body": {
+      "family": "Open Sans",
+      "weight": 400
+    }
+  },
   "favicon": "/ramp_favicon.jpeg",
   "navigation": {
     "tabs": [
