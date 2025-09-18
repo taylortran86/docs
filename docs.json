@@ -7,6 +7,10 @@
     "light": "#e4f221",
     "dark": "#e4f221"
   },
+  "banner": {
+    "content": "Welcome to the Ramp API Docs! Contact us at [test@ramp.com](mailto:test@ramp.com) for any questions.",
+    "dismissible": true 
+  },
   "fonts": {
     "family": "Inter",
     "heading": {
