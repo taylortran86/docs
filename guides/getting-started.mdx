@@ -48,6 +48,61 @@ You’ll authenticate with your Client ID and Secret to get a token:
 ```Content-Type```: ```application/x-www-form-urlencoded```
 ```grant_type```: ```client_credentials```
 ```scope```: space-separated list of scopes (e.g., ```transactions:read```)
+<Tabs>
+  <Tab title = "Shell">
+    ```shell
+curl --location --request POST '{environment-url}/developer/v1/token' \
+  --header "Authorization: Basic $(echo -n "$CLIENT_ID:$CLIENT_SECRET" | base64)" \
+  --header "Content-Type: application/x-www-form-urlencoded" \
+  --data "grant_type=client_credentials" \
+  --data "scope=transactions:read"
+    ```
+  </Tab>
+  <Tab title = "Javascript">
+    ```javascript
+const endpoint = '{environment-url}/developer/v1/token'
+const clientId = process.env.CLIENT_ID
+const clientSecret = process.env.CLIENT_SECRET
+
+const headers = {
+  'Authorization': `Basic ${btoa(`${clientId}:${clientSecret}`)}`,
+  'Content-Type': 'application/x-www-form-urlencoded',
+}
+
+const body = new URLSearchParams({
+  grant_type: 'client_credentials',
+  scope: 'transactions:read'
+})
+
+fetch(endpoint, { method: 'POST', headers, body })
+  .then(res => res.json())
+  .then(console.log)
+    ```
+  </Tab>
+  <Tab title = "Python">
+    ```python
+import os, base64, requests
+
+client_id = os.getenv("CLIENT_ID")
+client_secret = os.getenv("CLIENT_SECRET")
+
+auth = base64.b64encode(f"{client_id}:{client_secret}".encode()).decode()
+
+headers = {
+  "Authorization": f"Basic {auth}",
+  "Content-Type": "application/x-www-form-urlencoded"
+}
+
+data = {
+  "grant_type": "client_credentials",
+  "scope": "transactions:read"
+}
+
+resp = requests.post("{environment-url}/developer/v1/token", headers=headers, data=data)
+print(resp.json())
+    ```
+  </Tab>
+</Tabs>
 
 If successful, you’ll receive a response like this:
 
@@ -66,6 +121,7 @@ Copy the access_token – you’ll use it to authenticate your API calls.
 </Accordion>
 
 <Accordion title = "Make an API Call">
+
 </Accordion>
 
 
