@@ -33,10 +33,15 @@
             "pages": [
               "index",
               "guides/getting-started",
-              "guides/app-center",
               "guides/data-relationships",
               "guides/errors",
               "guides/ramp-mcp"
+            ]
+          },
+          {
+            "group": "Guides",
+            "pages": [
+              "guides/app-center"
             ]
           }
         ]
