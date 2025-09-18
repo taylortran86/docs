@@ -44,12 +44,12 @@ Ramp offers two environments:
 <Accordion title = "Request an Access Token">
 You’ll authenticate with your Client ID and Secret to get a token:
 
-```Authorization Header```: This contains the Client ID and Client Secret, encoded in base64. The format is Authorization: Basic ```<base64(client_id:client_secret)>```.
-```Content-Type```: ```application/x-www-form-urlencoded```
-```grant_type```: ```client_credentials```
-```scope```: space-separated list of scopes (e.g., ```transactions:read```)
-<CodeGroup dropdown>
+- `Authorization Header`: This contains the Client ID and Client Secret, encoded in base64. The format is Authorization: Basic `<base64(client_id:client_secret)>`.
+- `Content-Type`: `application/x-www-form-urlencoded`
+- `grant_type`: `client_credentials`
+- `scope`: space-separated list of scopes (e.g., `transactions:read`)
 
+<CodeGroup dropdown>
 ```shell Shell
 curl --location --request POST '{environment-url}/developer/v1/token' \
   --header "Authorization: Basic $(echo -n "$CLIENT_ID:$CLIENT_SECRET" | base64)" \
