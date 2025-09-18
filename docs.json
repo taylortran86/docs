@@ -55,6 +55,7 @@
             "group": "Webhooks",
             "pages": [
               "api-reference/get-all-webhook-subscriptions",
+              "api-reference/create-a-webhook-subscription",
               "api-reference/verify-a-webhook-subscription"
             ]
           }
