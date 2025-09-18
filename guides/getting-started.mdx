@@ -5,7 +5,7 @@ description: "This guide walks you through making your first API call with Ramp.
 
 <Note>
 <b>Using Claude Code, Cursor, or other AI dev tools?</b>
-  <br>Install our Developer MCP to give your AI assistant complete knowledge of Ramp's API - like having a Ramp engineer pair programming with you. [Learn more](/guides/ramp-mcp)
+  <br/>Install our Developer MCP to give your AI assistant complete knowledge of Ramp's API - like having a Ramp engineer pair programming with you. [Learn more](/guides/ramp-mcp)
 </Note>
 
 ## Understanding environments
@@ -22,3 +22,40 @@ Ramp offers two environments:
 | `https://api.ramp.com`  | For live use. Interacts with your real Ramp account. Use only after testing in Sandbox. |
   </Tab>
 </Tabs>
+
+## Quickstart: Authorize with Client Credentials
+<Warning>
+<b>Permission Required</b>
+<br/>API access requires ADMIN or IT_ADMIN role. If you don't see "Developer API" in your Ramp account or get permission errors, contact your Ramp administrator to upgrade your permissions. Managers and regular users cannot create apps or generate tokens.
+</Warning>
+
+
+<Accordion title = "Create a developer app">
+1. Press CMD + K and select Developer API in your Ramp account (or Sandbox).
+2. Click Create New App.
+3. Name your app, accept the Terms, and click Create.
+4. Under Grant types, click Add new grant type → select Client Credentials.
+5. Under Scopes, click Configure allowed scopes and select transactions:read (or others as needed).
+6. Copy your Client ID and Client Secret. These will be used in your token request.
+</Accordion>
+
+<Accordion title = "Request an Access Token">
+
+If successful, you’ll receive a response like this:
+
+```javascript
+{
+  "access_token": "ramp_tok_abc123...",
+  "token_type": "bearer",
+  "expires_in": 864000,
+  "scope": "transactions:read"
+}
+```
+Copy the access_token – you’ll use it to authenticate your API calls.
+<Danger>
+<b>Access and refresh tokens should never be transmitted or stored without encryption.</b>
+</Danger>
+</Accordion>
+
+<Accordion title = "Make an API Call">
+</Accordion>
