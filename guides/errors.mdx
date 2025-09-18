@@ -5,7 +5,47 @@ description: "The Ramp API returns detailed error information in the response bo
 import Feedback from '/snippets/feedback.mdx';
 
 ## Error response format
+Here is an example of an error response:
+
+```javascript Error Format lines 
+Response Code: 422
+Response Contents: {
+   "error_v2": {
+      "error_code": "DEVELOPER_7001",
+      "additional_info": {
+         "page_size": [
+            "Value must be between 2 and 100"
+         ]
+      },
+      "notes": "",
+      "message": "Value must be between 2 and 100"
+   },
+   "error": {
+      "page_size": [
+         "Value must be between 2 and 100"
+      ]
+   }
+}
+```
 
 
+## Best Practices for Handling Errors
+<Steps>
+    <Step title = "Inspect HTTP Status Codes">
+    Use status codes to identify the category of the error (e.g., `4xx` for client errors, `5xx` for server errors).
+    </Step>
+    <Step title = "Utilize the `error_v2` Field">
+    Parse the `error_code` and `additional_info` to pinpoint the issue and provide actionable feedback in your application.
+    </Step>
+    <Step title = "Log Errors">
+    Log error responses, including the `x-trace-id` from the response headers, for easier debugging and communication with Ramp developer support.
+    </Step>
+    <Step title = "Implement Retry Logic">
+    For transient errors (e.g., `429 Too Many Requests` or `5xx`), implement exponential backoff to retry requests.
+    </Step>
+    <Step title = "Provide User Feedback">
+    Use the `message` field to display clear and concise error messages to users, when applicable.
+    </Step>
+</Steps>
 
 <Feedback/>
