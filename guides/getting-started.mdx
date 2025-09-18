@@ -48,18 +48,17 @@ You’ll authenticate with your Client ID and Secret to get a token:
 ```Content-Type```: ```application/x-www-form-urlencoded```
 ```grant_type```: ```client_credentials```
 ```scope```: space-separated list of scopes (e.g., ```transactions:read```)
-<Tabs>
-  <Tab title = "Shell">
-```shell
+<CodeGroup>
+
+```shell Shell
 curl --location --request POST '{environment-url}/developer/v1/token' \
   --header "Authorization: Basic $(echo -n "$CLIENT_ID:$CLIENT_SECRET" | base64)" \
   --header "Content-Type: application/x-www-form-urlencoded" \
   --data "grant_type=client_credentials" \
   --data "scope=transactions:read"
 ```
-  </Tab>
-  <Tab title = "Javascript">
-```javascript
+
+```javascript Javascript
 const endpoint = '{environment-url}/developer/v1/token'
 const clientId = process.env.CLIENT_ID
 const clientSecret = process.env.CLIENT_SECRET
@@ -78,9 +77,8 @@ fetch(endpoint, { method: 'POST', headers, body })
   .then(res => res.json())
   .then(console.log)
 ```
-  </Tab>
-  <Tab title = "Python">
-```python
+
+```python Python
 import os, base64, requests
 
 client_id = os.getenv("CLIENT_ID")
@@ -101,8 +99,7 @@ data = {
 resp = requests.post("{environment-url}/developer/v1/token", headers=headers, data=data)
 print(resp.json())
 ```
-  </Tab>
-</Tabs>
+</CodeGroup>
 
 If successful, you’ll receive a response like this:
 
@@ -122,16 +119,14 @@ Copy the access_token – you’ll use it to authenticate your API calls.
 
 <Accordion title = "Make an API Call">
 Use the ```access_token``` from the previous step in the ```Authorization``` header:
-<Tabs>
-  <Tab title = "Shell">
-```shell
+<CodeGroup>
+```shell Shell
 curl --request GET '{environment-url}/developer/v1/transactions' \
   --header "Authorization: Bearer $RAMP_API_TOKEN" \
   --header "Accept: application/json"
 ```
-  </Tab>
-  <Tab title = "Javascript">
-```javascript
+
+```javascript Javascript
 fetch('{environment-url}/developer/v1/transactions', {
   headers: {
     'Authorization': `Bearer ${accessToken}`,
@@ -141,9 +136,8 @@ fetch('{environment-url}/developer/v1/transactions', {
   .then(res => res.json())
   .then(console.log)
 ```
-  </Tab>
-  <Tab title = "Python">
-```python
+
+```python Python
 headers = {
   "Authorization": f"Bearer {access_token}",
   "Accept": "application/json"
@@ -151,8 +145,7 @@ headers = {
 response = requests.get("{environment-url}/developer/v1/transactions", headers=headers)
 print(response.json())
 ```
-  </Tab>
-</Tabs>
+</CodeGroup>
 </Accordion>
 
 <Feedback/>
