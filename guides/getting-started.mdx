@@ -2,6 +2,8 @@
 title: "Getting Started"
 description: "This guide walks you through making your first API call with Ramp. We'll use the Client Credentials flow, which is perfect for internal integrations and getting started quickly."
 ---
+import Feedback from '/snippets/feedback.mdx';
+
 
 <Note>
 <b>Using Claude Code, Cursor, or other AI dev tools?</b>
@@ -40,6 +42,12 @@ Ramp offers two environments:
 </Accordion>
 
 <Accordion title = "Request an Access Token">
+You’ll authenticate with your Client ID and Secret to get a token:
+
+```Authorization Header```: This contains the Client ID and Client Secret, encoded in base64. The format is Authorization: Basic ```<base64(client_id:client_secret)>```.
+```Content-Type```: ```application/x-www-form-urlencoded```
+```grant_type```: ```client_credentials```
+```scope```: space-separated list of scopes (e.g., ```transactions:read```)
 
 If successful, you’ll receive a response like this:
 
@@ -59,3 +67,6 @@ Copy the access_token – you’ll use it to authenticate your API calls.
 
 <Accordion title = "Make an API Call">
 </Accordion>
+
+
+<Feedback/>
