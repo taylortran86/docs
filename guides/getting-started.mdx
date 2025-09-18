@@ -121,8 +121,37 @@ Copy the access_token – you’ll use it to authenticate your API calls.
 </Accordion>
 
 <Accordion title = "Make an API Call">
-
+Use the ```access_token``` from the previous step in the ```Authorization``` header:
+<Tabs>
+  <Tab title = "Shell">
+    ```shell
+curl --request GET '{environment-url}/developer/v1/transactions' \
+  --header "Authorization: Bearer $RAMP_API_TOKEN" \
+  --header "Accept: application/json"
+    ```
+  </Tab>
+  <Tab title = "Javascript">
+    ```javascript
+fetch('{environment-url}/developer/v1/transactions', {
+  headers: {
+    'Authorization': `Bearer ${accessToken}`,
+    'Accept': 'application/json'
+  }
+})
+  .then(res => res.json())
+  .then(console.log)
+  </Tab>
+  <Tab title = "Python">
+    ```python
+headers = {
+  "Authorization": f"Bearer {access_token}",
+  "Accept": "application/json"
+}
+response = requests.get("{environment-url}/developer/v1/transactions", headers=headers)
+print(response.json())
+    ```
+  </Tab>
+</Tabs>
 </Accordion>
-
 
 <Feedback/>
