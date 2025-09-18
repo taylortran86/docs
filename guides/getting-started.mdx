@@ -48,7 +48,7 @@ You’ll authenticate with your Client ID and Secret to get a token:
 ```Content-Type```: ```application/x-www-form-urlencoded```
 ```grant_type```: ```client_credentials```
 ```scope```: space-separated list of scopes (e.g., ```transactions:read```)
-<CodeGroup>
+<CodeGroup dropdown>
 
 ```shell Shell
 curl --location --request POST '{environment-url}/developer/v1/token' \
@@ -99,7 +99,7 @@ data = {
 resp = requests.post("{environment-url}/developer/v1/token", headers=headers, data=data)
 print(resp.json())
 ```
-</CodeGroup dropdown>
+</CodeGroup>
 
 If successful, you’ll receive a response like this:
 
