@@ -1,0 +1,39 @@
+---
+title: 'Overview'
+description: 'Example section for showcasing API endpoints'
+---
+
+<Note>
+  If you're not looking to build API reference documentation, you can delete
+  this section by removing the api-reference folder.
+</Note>
+
+## Welcome
+
+<Card
+  title="Accounting Endpoints"
+  icon="book"
+  href="api-reference/endpoint/fetch-all-accounting-connections"
+>
+  View all Accounting API Endpoints
+</Card>
+
+<Card
+  title="Webhook Endpoints"
+  icon="webhook"
+  href="api-reference/endpoint/get-all-webhook-subscriptions"
+>
+  View all Webhook API Endpoints
+</Card>
+
+## Authentication
+
+All API endpoints are authenticated using Bearer tokens and picked up from the specification file.
+
+```json
+"security": [
+  {
+    "bearerAuth": []
+  }
+]
+```
