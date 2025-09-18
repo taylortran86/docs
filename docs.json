@@ -17,11 +17,11 @@
             "group": "Guides",
             "pages": [
               "index",
-              "dev_docs/getting-started",
-              "dev_docs/app-center",
-              "dev_docs/data-relationships",
-              "dev_docs/errors",
-              "dev_docs/ramp-mcp"
+              "guides/getting-started",
+              "guides/app-center",
+              "guides/data-relationships",
+              "guides/errors",
+              "guides/ramp-mcp"
             ]
           }
         ]
