@@ -208,14 +208,14 @@
         ]
       }
     },
-    "/developer/v1/webhooks/{webhookId}/verify": {
+    "/developer/v1/webhooks/{webhook_id}/verify": {
       "post": {
         "summary": "Verify a webhook endpoint",
         "operationId": "verifyWebhook",
         "tags": ["Webhooks"],
         "parameters": [
           {
-            "name": "webhookId",
+            "name": "webhook_id",
             "in": "path",
             "required": true,
             "description": "The ID of the webhook to verify",
